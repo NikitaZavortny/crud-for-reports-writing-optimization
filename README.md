@@ -30,5 +30,5 @@ This project is licensed under the MIT License - see the LICENSE.txt file for de
 ## Contribution guide
 1. fork, than clone your project
 2. add, commit and push
-Did you want normal contrib guide. Nope, I'm too lazy btw.
+Did you want normal contrib guide? Nope, I'm too lazy btw.
 And we have no docs :D
