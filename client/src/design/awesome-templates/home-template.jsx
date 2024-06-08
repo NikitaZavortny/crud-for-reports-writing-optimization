@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '../awesome-components/navbar-default.jsx';
 
-function Home(props) {
+function HomeTemplate(props) {
     return ( 
         <div>
-            <div className="text-white">
+            <div className="text-dark ">
                 <Navbar />
                 {props.children}
             </div>
@@ -12,4 +12,4 @@ function Home(props) {
     );
 }
 
-export default Home;
+export default HomeTemplate;

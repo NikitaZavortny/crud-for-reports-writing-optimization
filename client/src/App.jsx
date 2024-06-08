@@ -10,8 +10,10 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import "./bootstrap.css";
 import "./curves.scss";
 import HomePage from './design/pages/home-page.jsx';
-import ReduxSaga from './design/pages/redux-saga.jsx';
 import LoginFormPage from './design/pages/login-page.jsx';
+import ProfilePage from './design/pages/profile-page.jsx';
+import AdminPage from './design/pages/admin-page.jsx';
+import ReportPage from './design/pages/report-page.jsx';
 
 function App() {
   return (
@@ -23,8 +25,10 @@ function App() {
       <BrowserRouter basename="/">
         <Routes>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/redux" element={<ReduxSaga />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/login" element={<LoginFormPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/report" element={<ReportPage />} />
         </Routes>
       </BrowserRouter>
 

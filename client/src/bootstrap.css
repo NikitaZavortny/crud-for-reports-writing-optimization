@@ -218,6 +218,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -417,6 +419,30 @@ kbd kbd {
 
 figure {
   margin: 0 0 1rem;
+}
+
+.img-profpic{
+  height: 30vh;
+  width: 23vh;
+  display: block;
+  margin-right: auto;
+}
+.left-side{
+  text-align: left;
+}
+.badass-bold{
+  font-weight: bold;
+}
+
+.btn-orange-moon {
+  background: #fc4a1a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  border: 3px solid #eee;
 }
 
 img,
@@ -761,7 +787,9 @@ progress {
   margin-right: auto;
   margin-left: auto;
 }
-
+.align-left{
+  text-align: left;
+}
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -5564,6 +5592,7 @@ textarea.form-control-lg {
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   border-radius: var(--bs-modal-border-radius);
   outline: 0;
+  height: 30vh;
 }
 
 .modal-backdrop {
@@ -12191,7 +12220,7 @@ label {
 
 .footer{
   bottom: 0;
-    width: 100%;
+  width: 100%;
 }
 .section-transition {
   position: relative;
@@ -12200,4 +12229,32 @@ label {
   align-items: center;
   min-height: 400px;
   padding-top: 100px;
+}
+.section-fullwindow{
+  min-height: 80vh;
+}
+
+.round-input{
+    border-radius: 2em;
+}
+
+.btn{
+  border-radius: 2em;
+}
+
+.popup{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.popup.active{
+  transform: scale(1);
 }

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { defState, setToken } from '../state-management/store/auth-reducer.js';
 
 export const API_URL = `http://localhost:5000/api`
 
@@ -8,6 +7,10 @@ const $api = axios.create({
     baseURL: API_URL
 })
 
+$api.interceptors.request.use((config) => {
+    config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`
+    return config;
+})
 
 $api.interceptors.response.use((config) => {
     return config;
@@ -17,23 +20,13 @@ $api.interceptors.response.use((config) => {
         originalRequest._isRetry = true;
         try {
             const response = await axios.get(`${API_URL}/refresh`, { withCredentials: true })
-            
-            
-            setToken(response.data.accessToken);
-            
-            
+            localStorage.setItem('token', response.data.accessToken);
             return $api.request(originalRequest);
         } catch (e) {
-            console.log('Not authorized')
+            console.log('НЕ АВТОРИЗОВАН')
         }
     }
     throw error;
 })
-
-$api.interceptors.request.use((config) => {
-    config.headers.Authorization = `Bearer ${defState}`
-    return config;
-})
-
 
 export default $api;

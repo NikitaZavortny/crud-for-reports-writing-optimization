@@ -1,18 +1,20 @@
 import React, { FC, useContext, useState } from 'react';
+import { Context } from "../../main";
+import { observer } from "mobx-react-lite";
 
-function LoginForm() {
+function LoginTemplate() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const { store } = useContext(Context);
 
     return (
         <div>
             <form>
                 <fieldset>
                     <div class="row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                         <input
-                            class="form-control"
+                            class="form-control round-input"
                             onChange={e => setEmail(e.target.value)}
                             value={email}
                             type="text"
@@ -20,7 +22,7 @@ function LoginForm() {
                         />
                         <p></p>
                         <input
-                            class="form-control"
+                            class="form-control round-input"
                             onChange={e => setPassword(e.target.value)}
                             value={password}
                             type="password"
@@ -28,11 +30,11 @@ function LoginForm() {
                         />
                         <p></p>
                         <button type="button" class="btn btn-info" onClick={() => store.login(email, password)}>
-                            Log in
+                            Войти
                         </button>
                         <p></p>
                         <button type="button" class="btn btn-info" onClick={() => store.registration(email, password)}>
-                            Register
+                            Зарегистрироваться
                         </button>
                     </div>
                 </fieldset>
@@ -41,4 +43,4 @@ function LoginForm() {
     );
 }
 
-export default LoginForm;
+export default observer(LoginTemplate);

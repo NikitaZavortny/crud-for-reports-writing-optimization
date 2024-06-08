@@ -4,11 +4,11 @@ function HomeFooter() {
     return (
         <div>
             
-            <footer class="text-center bg-dark text-lg-start text-white footer">
+            <footer class="text-center bg-light text-lg-start text-dark footer">
                 <div
-                    class="d-flex justify-content-between p-4 bg-success "
+                    class="d-flex justify-content-between p-4 bg-dark"
                 >
-                    <div class="me-5">
+                    <div class="me-5 text-light">
                         <span>Get connected with us on social networks:</span>
                     </div>
                     <div>
@@ -98,7 +98,7 @@ function HomeFooter() {
                 <div
                     class="text-center p-3"
                 >
-                    © 2020 Copyright:
+                    © 2024 Copyright:
                     <a class="text-white" href="https://mdbootstrap.com/"
                     >MDBootstrap.com</a>
                 </div>
